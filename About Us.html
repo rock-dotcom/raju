@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+        header {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        header nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 100px auto;
+            width: 80%;
+            max-width: 900px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .next {
+            right: 0;
+        }
+        .prev:hover, .next:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation Buttons -->
+    <header>
+        <nav>
+            <a href="flight-info.html">Flight Information</a>
+            <a href="Airport facilities.html">Airport facilities</a>
+            <a href="business.html">Business</a>
+            <a href="About Us.html">About Us</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>About Us</h1>
+        
+        <!-- Slideshow -->
+        <div class="slideshow-container">
+            <img class="slides" src="https://blogbox.indianeagle.com/wp-content/uploads/2017/10/Rajiv-Gandhi-International-Airport.jpg" alt="Airport View 1">
+            <img class="slides" src="https://i.ytimg.com/vi/GyKBQS7HP_U/maxresdefault.jpg" alt="Airport View 2">
+            <img class="slides" src="https://www.kclimo.com/wp-content/uploads/2018/01/Airport-Shopping-1080x675.jpg" alt="Airport View 3">
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+        
+        <div class="about-content">
+            <p>Welcome to our airport, a hub of connectivity and excellence in air travel. Our mission is to provide world-class services, ensuring comfort, safety, and efficiency for all travelers.</p>
+            <p>With state-of-the-art infrastructure, dedicated staff, and a commitment to sustainability, we strive to create a seamless travel experience. From modern lounges to extensive shopping and dining options, we cater to every need.</p>
+            <p>As an integral part of the region's economy, we continuously work towards innovation, expansion, and enhancing passenger experience. We are proud to be a gateway to the world, connecting people and businesses across the globe.</p>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function changeSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slides");
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+</html>
+1

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Flight</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://www.shutterstock.com/shutterstock/videos/1099160121/thumb/10.jpg?ip=x480') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9); /* White background with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .flight-list {
+            text-align: left;
+        }
+        .flight-list h2 {
+            font-size: 1.5rem;
+            color: #007BFF;
+            margin: 10px 0;
+        }
+        .flight-list p {
+            font-size: 1rem;
+            color: #666;
+            margin: 5px 0;
+        }
+        .navigator-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            cursor: pointer; /* Add pointer cursor to indicate it's clickable */
+        }
+        .navigator-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6; /* Make the map image transparent */
+        }
+        .navigator-button span {
+            position: absolute;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0d1013;
+            z-index: 1;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;=
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: #1f0606;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TRACK YOUR FLIGHT</h1>
+        <div class="flight-list">
+            <h2>Chennai to Hyderabad</h2>
+            <p>Departure: 10:00 AM | Arrival: 11:30 AM</p>
+            <p>Airports: Chennai International Airport → Hyderabad International Airport</p>
+            
+            <h2>Hyderabad to Delhi</h2>
+            <p>Departure: 12:00 PM | Arrival: 2:30 PM</p>
+            <p>Airports: Hyderabad International Airport → Delhi Indira Gandhi Airport</p>
+            
+            <h2>Delhi to Mumbai</h2>
+            <p>Departure: 3:00 PM | Arrival: 5:00 PM</p>
+            <p>Airports: Delhi Indira Gandhi Airport → Mumbai Chhatrapati Shivaji Airport</p>
+        </div>
+    </div>
+
+    <!-- Navigator Button -->
+    <a href="3d.html" class="navigator-button">
+        <img src="https://cdn.prod.website-files.com/609ed46055e27a02ffc0749b/668ed88359c0583319ac9e1b_63b589301fb0819e399cdbe4_image9.png" alt="Map">
+        <span>Smart Navigation</span>
+    </a>
+</body>
+</html>

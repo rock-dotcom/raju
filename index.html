@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images5.alphacoders.com/863/863248.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100vh;
+        }
+        header {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        header nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Bottom Right Corner Buttons */
+        .action-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1001;
+        }
+        .action-buttons button {
+            padding: 12px 24px;
+            font-size: 1rem;
+            color: white;
+            border: none;
+            border-radius: 25px; /* Rounded corners for modern look */
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+        }
+        .action-buttons button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .action-buttons .status-btn {
+            background-color: #007BFF; /* Blue for Status */
+        }
+        .action-buttons .status-btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        .action-buttons .accommodation-btn {
+            background-color: #28a745; /* Green for Accommodation */
+        }
+        .action-buttons .accommodation-btn:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            bottom: 100px; /* Adjusted to avoid overlap with buttons */
+            left: 25px;
+            width: 550px;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .search-box {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+        }
+        .search-box input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .search-box button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-box button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation Buttons -->
+    <header>
+        <nav>
+            <a href="flight-info.html">Flight Information</a>
+            <a href="Airport facilities.html">Airport facilities</a>
+            <a href="business.html">Business</a>
+            <a href="About Us.html">About Us</a>
+            <a href="Contact.html">Contact</a>
+            <a href="hotel.html"> hotel</a>
+        </nav>
+    </header>
+
+    <!-- Bottom Right Corner Buttons -->
+    <div class="action-buttons">
+        <button class="status-btn" onclick="window.location.href='flight.html'">Status</button>
+        <button class="accommodation-btn" onclick="window.location.href='hotel.html'">Accommodation</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Welcome to Rajiv Gandhi Airport</h1>
+        <div class="search-box">
+            <input type="text" placeholder="Find your flight...">
+            <button>Search</button>
+        </div>
+    </div>
+</body>
+</html>
